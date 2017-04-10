@@ -58,3 +58,31 @@ entries:
     - title: Sample 7
       url: /p1_sample7.html
       output: web, pdf
+
+  - title: Tag archives
+    output: web
+    folderitems:
+
+    - title: AEAD pages
+      url: /tag_AEAD.html
+      output: web
+
+    - title: AES pages
+      url: /tag_AES.html
+      output: web
+
+    - title: GCM pages
+      url: /tag_GCM.html
+      output: web
+
+    - title: Java pages
+      url: /tag_Java.html
+      output: web
+
+    - title: PBKDF2 pages
+      url: /tag_PBKDF2.html
+      output: web
+
+    - title: salt pages
+      url: /tag_salt.html
+      output: web
