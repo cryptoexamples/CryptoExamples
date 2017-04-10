@@ -1,9 +1,9 @@
 ---
-title: Java AES Encryption
+title: Java String Encryption
 keywords: sample
-summary: "Java based symmetric encryption using AES-GCM and PBKDF2"
+summary: "Java based string encryption"
 sidebar: product1_sidebar
-permalink: p1_sample1.html
+permalink: java_string_encryption_symmetric.html
 folder: product1
 tags: [Java, AES, GCM, PBKDF2, Salt, AEAD]
 ---

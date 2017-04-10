@@ -20,15 +20,15 @@ entries:
       output: pdf
       type: frontmatter
 
-  - title: Getting Started
+  - title: Java Scenarios
     output: web, pdf
     folderitems:
-    - title: Product 1 home
+    - title: Java Crypto Introdcution
       url: /p1_landing_page.html
       output: web
 
-    - title: Sample 1
-      url: /p1_sample1.html
+    - title: String Encryption
+      url: /java_string_encryption_symmetric.html
       output: web, pdf
 
     - title: Sample 2
