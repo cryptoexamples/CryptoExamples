@@ -83,6 +83,6 @@ entries:
       url: /tag_PBKDF2.html
       output: web
 
-    - title: salt pages
-      url: /tag_salt.html
+    - title: Salt pages
+      url: /tag_Salt.html
       output: web
