@@ -1,3 +1,5 @@
+/* This license pertains to the Jekyll Documentation Theme. */
+
 The MIT License (MIT)
 
 Copyright (c) 2016 Tom Johnson
