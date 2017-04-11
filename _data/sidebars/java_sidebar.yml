@@ -34,6 +34,10 @@ entries:
     - title: Advanced String Encryption
       url: /java_advanced_string_AES_encryption.html
       output: web, pdf
+    
+    - title: Easy String Encryption
+      url: /java_easy_AES_string_encryption.html
+      output: web, pdf
       
   - title: Tag archives
     output: web
