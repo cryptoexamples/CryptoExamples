@@ -5,7 +5,6 @@ import java.security.SecureRandom;
 import java.security.spec.InvalidKeySpecException;
 import java.security.spec.KeySpec;
 import java.util.Base64;
-import java.util.Base64.Encoder;
 
 import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;
@@ -18,75 +17,63 @@ import javax.crypto.spec.GCMParameterSpec;
 import javax.crypto.spec.PBEKeySpec;
 import javax.crypto.spec.SecretKeySpec;
 
+/**
+ * All in one example for encryption and decryption of a string in one method;
+ * Including
+ * - random password generation,
+ * - random salt generation,
+ * - key derivation using PBKDF2 HMAC SHA-256,
+ * - AES-256 authenticated encryption using GCM
+ * - BASE64-encoding for the byte-arrays
+ * - exception handling
+ */
 public class AESStringEncryption {
 
   public static void main(String[] args) {
     String plainText = "Text that is going to be sent over an insecure channel and must be encrypted at all costs!";
-
     try {
-
-      // generate password, if you have one save it in `password`
+      // GENERATE password
       KeyGenerator keyGen = KeyGenerator.getInstance("AES");
       // Needs unlimited strength policy files http://www.oracle.com/technetwork/java/javase/downloads
       keyGen.init(256);
       String password = Base64.getEncoder().encodeToString(keyGen.generateKey().getEncoded());
 
+      // GENERATE random salt
       final byte[] salt = new byte[12];
       SecureRandom random = SecureRandom.getInstanceStrong();
       random.nextBytes(salt);
-      /* Derive the key, given password and salt. */
+
+      // DERIVE key (from password and salt)
       SecretKeyFactory factory = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA256");
       // Needs unlimited strength policy files http://www.oracle.com/technetwork/java/javase/downloads
       KeySpec keyspec = new PBEKeySpec(password.toCharArray(), salt, 65536, 256);
       SecretKey tmp = factory.generateSecret(keyspec);
       SecretKey key = new SecretKeySpec(tmp.getEncoded(), "AES");
 
-      Cipher cipher = Cipher.getInstance("AES/GCM/PKCS5Padding");
-      final byte[] nonce = new byte[12];
+      // GENERATE random nonce (number used once)
+      final byte[] nonce = new byte[32];
       random.nextBytes(nonce);
+
+      // ENCRYPTION
+      Cipher cipher = Cipher.getInstance("AES/GCM/PKCS5Padding");
       GCMParameterSpec spec = new GCMParameterSpec(16 * 8, nonce);
       cipher.init(Cipher.ENCRYPT_MODE, key, spec);
 
-      //byte[] aad = "Whatever I like".getBytes();
+      //byte[] aad = "Additional authenticated not encrypted data".getBytes();
       //cipher.updateAAD(aad);
 
       byte[] byteCipher = cipher.doFinal(plainText.getBytes());
+      // CONVERSION of raw bytes to BASE64 representation
+      String cipherText = new String(Base64.getEncoder().encode(byteCipher));
 
-      Encoder b64Encoder = Base64.getEncoder();
-      String cipherText = new String(b64Encoder.encode(byteCipher));
-
-
+      // DECRYPTION
       cipher.init(Cipher.DECRYPT_MODE, key, spec);
       //cipher.updateAAD(aad);
-      byte[] decryptedCipher = cipher.doFinal(byteCipher);
+      byte[] decryptedCipher = cipher.doFinal(Base64.getDecoder().decode(cipherText));
       String decryptedCipherString = new String(decryptedCipher);
 
       System.out.println("Decrypted and original plain text are the same: " + ((decryptedCipherString.compareTo(plainText))==0 ? "true" : "false"));
-
-    } catch (NoSuchAlgorithmException e) {
-      System.out.println(e.getMessage());
-      e.printStackTrace();
-      return;
-    } catch (NoSuchPaddingException e) {
-      System.out.println(e.getMessage());
-      e.printStackTrace();
-      return;
-    } catch (InvalidKeyException e) {
-      System.out.println(e.getMessage());
-      e.printStackTrace();
-      return;
-    } catch (IllegalBlockSizeException e) {
-      System.out.println(e.getMessage());
-      e.printStackTrace();
-      return;
-    } catch (BadPaddingException e) {
-      System.out.println(e.getMessage());
-      e.printStackTrace();
-      return;
-    } catch (InvalidAlgorithmParameterException e) {
-      System.out.println(e.getMessage());
-      e.printStackTrace();
-    } catch (InvalidKeySpecException e) {
+    } catch (NoSuchAlgorithmException | NoSuchPaddingException | InvalidKeyException | IllegalBlockSizeException | BadPaddingException | InvalidAlgorithmParameterException | InvalidKeySpecException e) {
       System.out.println(e.getMessage());
       e.printStackTrace();
     }

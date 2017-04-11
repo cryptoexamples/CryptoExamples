@@ -5,8 +5,6 @@ import java.security.SecureRandom;
 import java.security.spec.InvalidKeySpecException;
 import java.security.spec.KeySpec;
 import java.util.Base64;
-import java.util.Base64.Decoder;
-import java.util.Base64.Encoder;
 
 import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;
@@ -19,7 +17,7 @@ import javax.crypto.spec.GCMParameterSpec;
 import javax.crypto.spec.PBEKeySpec;
 import javax.crypto.spec.SecretKeySpec;
 
-// TODO check if byte arrays need to be replaced by something like byteSource (deletion of content)
+// TODO check if KeyStore should be used
 
 /**
  * Object oriented example for encryption and decryption of a string;
@@ -32,6 +30,12 @@ import javax.crypto.spec.SecretKeySpec;
  * - exception handling
  */
 public class AESStringEncryptionOO {
+
+  final static int GCM_AUTHENTICATION_TAG_SIZE_BITS = 128;
+  final static int GCM_IV_NONCE_SIZE_BYTES = 12;
+  final static int PBKDF2_ITERATIONS = 65536;
+  final static int PBKDF2_SALT_SIZE_BYTES = 32;
+  final static int AES_KEY_LENGTH_BITS = 256;
 
   public static void main(String[] args) {
     String plainText = "Text that is going to be sent over an insecure channel and must be encrypted at all costs!";
@@ -55,50 +59,47 @@ public class AESStringEncryptionOO {
     /* Derive the key*/
     SecretKeyFactory factory = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA256");
     // Needs unlimited strength policy files http://www.oracle.com/technetwork/java/javase/downloads
-    KeySpec keyspec = new PBEKeySpec(password.toCharArray(), salt, 65536, 256);
+    KeySpec keyspec = new PBEKeySpec(password.toCharArray(), salt, PBKDF2_ITERATIONS, AES_KEY_LENGTH_BITS);
     SecretKey tmp = factory.generateSecret(keyspec);
     SecretKey key = new SecretKeySpec(tmp.getEncoded(), "AES");
 
     Cipher cipher = Cipher.getInstance("AES/GCM/PKCS5Padding");
 
-    GCMParameterSpec spec = new GCMParameterSpec(16 * 8, nonce);
+    GCMParameterSpec spec = new GCMParameterSpec(GCM_AUTHENTICATION_TAG_SIZE_BITS, nonce);
     cipher.init(Cipher.ENCRYPT_MODE, key, spec);
 
     byte[] byteCipher = cipher.doFinal(plainText.getBytes());
 
-    Encoder b64Encoder = Base64.getEncoder();
-    return new String(b64Encoder.encode(byteCipher));
+    return new String(Base64.getEncoder().encode(byteCipher));
   }
 
   public static String decrypt(String cipherText, String password, byte[] salt, byte[] nonce) throws NoSuchAlgorithmException, InvalidKeySpecException, NoSuchPaddingException, InvalidAlgorithmParameterException, InvalidKeyException, BadPaddingException, IllegalBlockSizeException {
     /* Derive the key*/
     SecretKeyFactory factory = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA256");
     // Needs unlimited strength policy files http://www.oracle.com/technetwork/java/javase/downloads
-    KeySpec keyspec = new PBEKeySpec(password.toCharArray(), salt, 65536, 256);
+    KeySpec keyspec = new PBEKeySpec(password.toCharArray(), salt, PBKDF2_ITERATIONS, AES_KEY_LENGTH_BITS);
     SecretKey tmp = factory.generateSecret(keyspec);
     SecretKey key = new SecretKeySpec(tmp.getEncoded(), "AES");
 
     Cipher cipher = Cipher.getInstance("AES/GCM/PKCS5Padding");
-    GCMParameterSpec spec = new GCMParameterSpec(16 * 8, nonce);
-
-    Decoder b64Decoder = Base64.getDecoder();
+    GCMParameterSpec spec = new GCMParameterSpec(GCM_AUTHENTICATION_TAG_SIZE_BITS, nonce);
 
     cipher.init(Cipher.DECRYPT_MODE, key, spec);
 
-    byte[] decryptedCipher = cipher.doFinal(b64Decoder.decode(cipherText));
+    byte[] decryptedCipher = cipher.doFinal(Base64.getDecoder().decode(cipherText));
     return new String(decryptedCipher);
   }
 
   public static String generatePassword() throws NoSuchAlgorithmException {
     KeyGenerator keyGen = KeyGenerator.getInstance("AES");
     // Needs unlimited strength policy files http://www.oracle.com/technetwork/java/javase/downloads
-    keyGen.init(256);
+    keyGen.init(AES_KEY_LENGTH_BITS);
     return Base64.getEncoder().encodeToString(keyGen.generateKey().getEncoded());
   }
 
   public static byte[] generateSalt() throws NoSuchAlgorithmException {
     /* generate random salt */
-    final byte[] salt = new byte[12];
+    final byte[] salt = new byte[PBKDF2_SALT_SIZE_BYTES];
     SecureRandom random = SecureRandom.getInstanceStrong();
     random.nextBytes(salt);
     return salt;
@@ -106,7 +107,7 @@ public class AESStringEncryptionOO {
 
   public static byte[] generateNonce() throws NoSuchAlgorithmException {
     SecureRandom random = SecureRandom.getInstanceStrong();
-    final byte[] nonce = new byte[12];
+    final byte[] nonce = new byte[GCM_IV_NONCE_SIZE_BYTES];
     random.nextBytes(nonce);
     return nonce;
   }
