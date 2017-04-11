@@ -52,22 +52,22 @@ public class AESStringEncryptionOO {
   }
 
   public static String encrypt(String plainText, String password, final byte[] salt, final byte[] nonce) throws BadPaddingException, IllegalBlockSizeException, InvalidAlgorithmParameterException, InvalidKeyException, NoSuchPaddingException, NoSuchAlgorithmException, InvalidKeySpecException {
-      /* Derive the key*/
-      SecretKeyFactory factory = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA256");
-      // Needs unlimited strength policy files http://www.oracle.com/technetwork/java/javase/downloads
-      KeySpec keyspec = new PBEKeySpec(password.toCharArray(), salt, 65536, 256);
-      SecretKey tmp = factory.generateSecret(keyspec);
-      SecretKey key = new SecretKeySpec(tmp.getEncoded(), "AES");
+    /* Derive the key*/
+    SecretKeyFactory factory = SecretKeyFactory.getInstance("PBKDF2WithHmacSHA256");
+    // Needs unlimited strength policy files http://www.oracle.com/technetwork/java/javase/downloads
+    KeySpec keyspec = new PBEKeySpec(password.toCharArray(), salt, 65536, 256);
+    SecretKey tmp = factory.generateSecret(keyspec);
+    SecretKey key = new SecretKeySpec(tmp.getEncoded(), "AES");
 
-      Cipher cipher = Cipher.getInstance("AES/GCM/PKCS5Padding");
+    Cipher cipher = Cipher.getInstance("AES/GCM/PKCS5Padding");
 
-      GCMParameterSpec spec = new GCMParameterSpec(16 * 8, nonce);
-      cipher.init(Cipher.ENCRYPT_MODE, key, spec);
+    GCMParameterSpec spec = new GCMParameterSpec(16 * 8, nonce);
+    cipher.init(Cipher.ENCRYPT_MODE, key, spec);
 
-      byte[] byteCipher = cipher.doFinal(plainText.getBytes());
+    byte[] byteCipher = cipher.doFinal(plainText.getBytes());
 
-      Encoder b64Encoder = Base64.getEncoder();
-      return new String(b64Encoder.encode(byteCipher));
+    Encoder b64Encoder = Base64.getEncoder();
+    return new String(b64Encoder.encode(byteCipher));
   }
 
   public static String decrypt(String cipherText, String password, byte[] salt, byte[] nonce) throws NoSuchAlgorithmException, InvalidKeySpecException, NoSuchPaddingException, InvalidAlgorithmParameterException, InvalidKeyException, BadPaddingException, IllegalBlockSizeException {
