@@ -5,6 +5,8 @@ import java.security.InvalidAlgorithmParameterException;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 import java.security.spec.InvalidKeySpecException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 // TODO check if KeyStore should be used
 
@@ -18,12 +20,13 @@ import java.security.spec.InvalidKeySpecException;
  * - BASE64-encoding for the byte-arrays
  * - exception handling
  */
-public class AESStringEncryptionOOEasy {
-
+public class ExampleEncryptedString {
+  private static final Logger LOGGER = Logger.getLogger( ExampleEncryptedString.class.getName() );
   public static void main(String[] args) {
     String plainText = "Text that is going to be sent over an insecure channel and must be encrypted at all costs!";
-    //String password = "givenPassword";
+
     try {
+      // GENERATE a password (if a password exists, use that).
       String password = EncryptedString.generatePassword(32);
 
       // ENCRYPTION
@@ -35,8 +38,7 @@ public class AESStringEncryptionOOEasy {
       boolean encryptionSuccessful = decryptedCipherText.compareTo(plainText) == 0;
       System.out.print("Decrypted and original plain text are the same: " + (encryptionSuccessful ? "true" : "false"));
     } catch (NoSuchAlgorithmException | NoSuchPaddingException | InvalidKeyException | InvalidAlgorithmParameterException | IllegalBlockSizeException | BadPaddingException | InvalidKeySpecException e) {
-      System.out.println("Error: " + e.getLocalizedMessage());
-      e.printStackTrace();
+      LOGGER.log(Level.SEVERE, e.getMessage(), e);
     }
   }
 

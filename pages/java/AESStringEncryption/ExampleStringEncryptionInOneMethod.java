@@ -1,21 +1,13 @@
-import java.security.InvalidAlgorithmParameterException;
-import java.security.InvalidKeyException;
-import java.security.NoSuchAlgorithmException;
-import java.security.SecureRandom;
-import java.security.spec.InvalidKeySpecException;
-import java.security.spec.KeySpec;
-import java.util.Base64;
-
-import javax.crypto.BadPaddingException;
-import javax.crypto.Cipher;
-import javax.crypto.IllegalBlockSizeException;
-import javax.crypto.KeyGenerator;
-import javax.crypto.NoSuchPaddingException;
-import javax.crypto.SecretKey;
-import javax.crypto.SecretKeyFactory;
+import javax.crypto.*;
 import javax.crypto.spec.GCMParameterSpec;
 import javax.crypto.spec.PBEKeySpec;
 import javax.crypto.spec.SecretKeySpec;
+import java.security.*;
+import java.security.spec.InvalidKeySpecException;
+import java.security.spec.KeySpec;
+import java.util.Base64;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * All in one example for encryption and decryption of a string in one method;
@@ -27,8 +19,8 @@ import javax.crypto.spec.SecretKeySpec;
  * - BASE64-encoding for the byte-arrays
  * - exception handling
  */
-public class AESStringEncryption {
-
+public class ExampleStringEncryptionInOneMethod {
+  private static final Logger LOGGER = Logger.getLogger( ExampleStringEncryptionInOneMethod.class.getName() );
   public static void main(String[] args) {
     String plainText = "Text that is going to be sent over an insecure channel and must be encrypted at all costs!";
     try {
@@ -72,10 +64,9 @@ public class AESStringEncryption {
       byte[] decryptedCipher = cipher.doFinal(Base64.getDecoder().decode(cipherText));
       String decryptedCipherString = new String(decryptedCipher);
 
-      System.out.println("Decrypted and original plain text are the same: " + ((decryptedCipherString.compareTo(plainText))==0 ? "true" : "false"));
-    } catch (NoSuchAlgorithmException | NoSuchPaddingException | InvalidKeyException | IllegalBlockSizeException | BadPaddingException | InvalidAlgorithmParameterException | InvalidKeySpecException e) {
-      System.out.println(e.getMessage());
-      e.printStackTrace();
+      LOGGER.info("INFORMATION: Decrypted and original plain text are the same: " + ((decryptedCipherString.compareTo(plainText))==0 ? "true" : "false"));
+    } catch (NoSuchAlgorithmException | NoSuchPaddingException | InvalidKeyException | IllegalBlockSizeException | BadPaddingException | InvalidParameterException | InvalidAlgorithmParameterException | InvalidKeySpecException e) {
+      LOGGER.log(Level.SEVERE, e.getMessage(), e);
     }
   }
 

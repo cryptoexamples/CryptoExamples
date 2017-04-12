@@ -28,11 +28,14 @@ import java.util.Base64;
 public class EncryptedString implements Serializable {
 
   /* 128, 120, 112, 104, or 96 @see NIST Special Publication 800-38D*/
-  private final int DEFAULT_GCM_AUTHENTICATION_TAG_SIZE_BITS = 128; 
+  private final int DEFAULT_GCM_AUTHENTICATION_TAG_SIZE_BITS = 128;
+
   private final int DEFAULT_GCM_IV_NONCE_SIZE_BYTES = 12;
   private final int DEFAULT_PBKDF2_ITERATIONS = 65536;
   private final int DEFAULT_PBKDF2_SALT_SIZE_BYTES = 32;
-  private final int DEFAULT_AES_KEY_LENGTH_BITS = 256; /* @see https://www.keylength.com/ */
+
+  /* @see https://www.keylength.com/ */
+  private final int DEFAULT_AES_KEY_LENGTH_BITS = 256;
   private final String DEFAULT_CIPHER = "AES";
   private final String DEFAULT_CIPHERSCHEME = "AES/GCM/PKCS5Padding";
   private final String DEFAULT_PBKDF2_SCHEME = "PBKDF2WithHmacSHA256";
@@ -137,8 +140,6 @@ public class EncryptedString implements Serializable {
   public EncryptedString encrypt(String plainText, String password) throws BadPaddingException, IllegalBlockSizeException, InvalidAlgorithmParameterException, InvalidKeyException, NoSuchPaddingException, NoSuchAlgorithmException, InvalidKeySpecException {
     /* Derive the key*/
     SecretKeyFactory factory = SecretKeyFactory.getInstance(PBKDF2_SCHEME);
-    // Needs unlimited strength policy files http://www.oracle.com/technetwork/java/javase/downloads
-    EncryptedString encryptedString = new EncryptedString();
     byte[] salt = generateRandomArry(PBKDF2_SALT_SIZE_BYTES);
     KeySpec keyspec = new PBEKeySpec(password.toCharArray(), salt, PBKDF2_ITERATIONS, AES_KEY_LENGTH_BITS);
     SecretKey tmp = factory.generateSecret(keyspec);

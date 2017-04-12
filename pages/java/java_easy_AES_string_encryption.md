@@ -11,7 +11,7 @@ tags: [Java, AES, GCM, PBKDF2, Salt, AEAD]
 ## Sample Code for Java based symmetric encryption 
 
 ```java
-{% include_relative AESStringEncryption/AESStringEncryptionOOEasy.java %}
+{% include_relative AESStringEncryption/ExampleEncryptedString.java %}
 ```
 
 ### EncryptedString Encapsulating class using AES-GCM and PBKDF2

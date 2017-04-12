@@ -8,10 +8,18 @@ folder: java
 tags: [Java, AES, GCM, PBKDF2, Salt, AEAD]
 ---
 
+## Use cases
+
+- password based encryption
+- previously shared common secret (password)
+- 
+
 ## Sample Code for Java based symmetric encryption using AES-GCM and PBKDF2
 
 ```java
-{% include_relative AESStringEncryption/AESStringEncryption.java %}
+{% include_relative AESStringEncryption/ExampleStringEncryptionInOneMethod.java %}
 ```
+
+
 
 {% include links.html %}
