@@ -1,10 +1,6 @@
-import javax.crypto.BadPaddingException;
-import javax.crypto.IllegalBlockSizeException;
-import javax.crypto.NoSuchPaddingException;
-import java.security.InvalidAlgorithmParameterException;
-import java.security.InvalidKeyException;
-import java.security.NoSuchAlgorithmException;
-import java.security.spec.InvalidKeySpecException;
+package com.cryptoexamples.java;
+
+import java.security.GeneralSecurityException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -21,7 +17,8 @@ import java.util.logging.Logger;
  * - exception handling
  */
 public class ExampleEncryptedString {
-  private static final Logger LOGGER = Logger.getLogger( ExampleEncryptedString.class.getName() );
+  private static final Logger LOGGER = Logger.getLogger(ExampleEncryptedString.class.getName());
+
   public static void main(String[] args) {
     String plainText = "Text that is going to be sent over an insecure channel and must be encrypted at all costs!";
 
@@ -35,9 +32,8 @@ public class ExampleEncryptedString {
       // DECRYPTION
       String decryptedCipherText = encryptedString.decrypt(password);
 
-      boolean encryptionSuccessful = decryptedCipherText.compareTo(plainText) == 0;
-      System.out.print("Decrypted and original plain text are the same: " + (encryptionSuccessful ? "true" : "false"));
-    } catch (NoSuchAlgorithmException | NoSuchPaddingException | InvalidKeyException | InvalidAlgorithmParameterException | IllegalBlockSizeException | BadPaddingException | InvalidKeySpecException e) {
+      LOGGER.log(Level.INFO, () -> String.format("Decrypted and original plain text are the same: %s", decryptedCipherText.compareTo(plainText) == 0 ? "true" : "false"));
+    } catch (GeneralSecurityException e) {
       LOGGER.log(Level.SEVERE, e.getMessage(), e);
     }
   }
