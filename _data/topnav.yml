@@ -13,6 +13,6 @@ topnav_dropdowns:
     - title: Products
       folderitems:
         - title: Java
-          url: /p1_landing_page.html
+          url: /java_landing_page.html
         - title: Product 2
           url: /p2_landing_page.html

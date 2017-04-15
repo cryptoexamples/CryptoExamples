@@ -24,7 +24,7 @@ entries:
     output: web, pdf
     folderitems:
     - title: Java Crypto Introdcution
-      url: /p1_landing_page.html
+      url: /java_landing_page.html
       output: web
 
     - title: String Encryption

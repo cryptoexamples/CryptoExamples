@@ -3,7 +3,7 @@ title: Java
 keywords: Java crypto example
 sidebar: java_sidebar
 toc: false
-permalink: p1_landing_page.html
+permalink: java_landing_page.html
 folder: java
 ---
 
