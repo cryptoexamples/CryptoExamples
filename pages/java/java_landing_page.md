@@ -11,7 +11,7 @@ folder: java
 
 |                                                 | All in One                             | Easy Object oriented                 |
 |-------------------------------------------------|----------------------------------------|--------------------------------------|
-| Symmetric Encryption                            | [✔](java_string_encryption_symmetric) | [✔](java_easy_AES_string_encryption) |
+| Symmetric Encryption                            | [String Encryption ✔ ](java_string_encryption_symmetric), [String Encryption ✔ ](java_file_encryption_symmetric_password_based| [✔](java_easy_AES_string_encryption) |
 | Asymmetric Encryption / Public Key Cryptography |                                        |                                      |
 | Key Storage                                     |                                        |                                      |
 | Hashing                                         |                                        |                                      |
