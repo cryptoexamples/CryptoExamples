@@ -91,7 +91,7 @@ public class ExampleFileEncryptionInOneMethod {
       LOGGER.log(Level.INFO, decryptedCipherText);
 
       LOGGER.log(Level.INFO,
-              () -> String.format("Decrypted and original plain text are the same: %s",
+              () -> String.format("Decrypted file content and original plain text are the same: %s",
                       decryptedCipherText.compareTo(plainText) == 0 ? "true" : "false")
       );
     } catch (NoSuchAlgorithmException |
