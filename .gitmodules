@@ -1,0 +1,3 @@
+[submodule "pages/java/java-crypto-examples"]
+	path = pages/java/java-crypto-examples
+	url = https://github.com/kmindi/java-crypto-examples.git

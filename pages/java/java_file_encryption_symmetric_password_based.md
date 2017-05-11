@@ -16,7 +16,7 @@ tags: [Java, AES, GCM, PBKDF2, Salt, AEAD]
 ## Sample Code for Java based symmetric file encryption using AES-GCM and PBKDF2
 
 ```java
-{% include_relative src/ExampleFileEncryptionInOneMethod.java %}
+{% include_relative java-crypto-examples/src/main/java/com/cryptoexamples/java/ExampleFileEncryptionInOneMethod.java %}
 ```
 
 
