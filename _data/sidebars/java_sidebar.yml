@@ -39,6 +39,10 @@ entries:
       url: /java_file_encryption_symmetric_password_based.html
       output: web, pdf
       
+    - title: Easy File Encryption
+      url: /java_easy_AES_file_encryption.html
+      output: web, pdf 
+
   - title: Tag archives
     output: web
     folderitems:
