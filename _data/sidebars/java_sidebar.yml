@@ -47,7 +47,7 @@ entries:
       url: /java_string_hash.html
       output: web, pdf 
  
-  - title: String Signing
+    - title: String Signing
       url: /java_string_sign.html
       output: web, pdf 
 
