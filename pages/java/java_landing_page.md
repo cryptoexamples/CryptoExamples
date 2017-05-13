@@ -14,6 +14,6 @@ folder: java
 | Symmetric Encryption                            | [String Encryption ✔](java_string_encryption_symmetric) <br />[File Encryption ✔](java_file_encryption_symmetric_password_based) | [String Encryption with separate class ✔](java_easy_AES_string_encryption) <br />[File Encryption with separate class ✔](java_easy_AES_file_encryption) |
 | Asymmetric Encryption / Public Key Cryptography |                                        |                                      |
 | Key Storage                                     |                                        |                                      |
-| Hashing                                         | [String Hash ✔](java_string_hash) |                                      |
+| Hashing                                         | [String Hash ✔](java_string_hash)      | N/A                                  |
 | Crypto Provider Setup                           |                                        |                                      |
-| Digital Signatures                              |                                        |                                      |
+| Digital Signatures                              | [String Signing ✔](java_string_sign)                                       |                                      |

@@ -46,6 +46,10 @@ entries:
     - title: Hashing
       url: /java_string_hash.html
       output: web, pdf 
+ 
+  - title: String Signing
+      url: /java_string_sign.html
+      output: web, pdf 
 
   - title: Tag archives
     output: web
