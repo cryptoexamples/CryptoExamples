@@ -42,6 +42,10 @@ entries:
     - title: Easy File Encryption
       url: /java_easy_AES_file_encryption.html
       output: web, pdf 
+    
+    - title: Hashing
+      url: /java_string_hash.html
+      output: web, pdf 
 
   - title: Tag archives
     output: web
