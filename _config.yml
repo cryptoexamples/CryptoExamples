@@ -30,6 +30,7 @@ exclude:
   - .bundle/
   - vendor/
   - pages/java/java-crypto-examples/
+  - pages/java-keyczar/java-keyczar-crypto-examples/
 # these are the files and directories that jekyll will exclude from the build
 
 feedback_subject_line: Crypto Examples
