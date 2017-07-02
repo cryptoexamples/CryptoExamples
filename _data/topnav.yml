@@ -10,9 +10,9 @@ topnav:
 topnav_dropdowns:
 - title: Topnav dropdowns
   folders:
-    - title: Products
+    - title: Languages and Libraries
       folderitems:
         - title: Java
           url: /java_landing_page.html
-        - title: Product 2
-          url: /p2_landing_page.html
+        - title: Java Keyczar
+          url: /java_keyczar_landing_page.html

@@ -1,0 +1,64 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+
+entries:
+- title: Sidebar
+  product: Java Keyczar
+  #version: 1.0
+  folders:
+
+  - title:
+    output: pdf
+    type: frontmatter
+    folderitems:
+    - title:
+      url: /titlepage
+      output: pdf
+      type: frontmatter
+    - title:
+      url: /tocpage
+      output: pdf
+      type: frontmatter
+
+  - title: Java Scenarios
+    output: web, pdf
+    folderitems:
+    - title: Java Crypto Introdcution
+      url: /java_keyczar_landing_page.html
+      output: web
+
+    - title: String Encryption
+      url: /java_keyczar_string_encryption_symmetric.html
+      output: web, pdf
+      
+    - title: String Signing
+      url: /java_keyczar_string_sign.html
+      output: web, pdf 
+
+  - title: Tag archives
+    output: web
+    folderitems:
+
+    - title: AEAD pages
+      url: /tag_AEAD.html
+      output: web
+
+    - title: AES pages
+      url: /tag_AES.html
+      output: web
+
+    - title: GCM pages
+      url: /tag_GCM.html
+      output: web
+
+    - title: Java pages
+      url: /tag_Java.html
+      output: web
+
+    - title: PBKDF2 pages
+      url: /tag_PBKDF2.html
+      output: web
+
+    - title: Salt pages
+      url: /tag_Salt.html
+      output: web

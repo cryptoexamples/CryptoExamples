@@ -14,6 +14,6 @@ entries:
     - title: Java
       url: /java_landing_page.html
       output: web
-    - title: Product 2
-      url: /p2_landing_page.html
+    - title: Java Keyczar
+      url: /java_keyczar_landing_page.html
       output: web

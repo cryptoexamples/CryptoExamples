@@ -16,6 +16,7 @@ They demonstrate how cryptography can be used in many programming languages for 
 ## Available programming languages and use cases
 
 - [Java (1.8)](java_landing_page)
+- [Java with keyczar](java_keyczar_landing_page)
 
 ## Goals
 
