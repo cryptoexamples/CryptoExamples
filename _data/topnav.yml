@@ -12,7 +12,7 @@ topnav_dropdowns:
   folders:
     - title: Languages and Libraries
       folderitems:
-        - title: Java
+        - title: Java using JDK
           url: /java_landing_page.html
-        - title: Java Keyczar
+        - title: Java using keyczar
           url: /java_keyczar_landing_page.html
