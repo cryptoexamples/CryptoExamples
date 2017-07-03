@@ -1,5 +1,5 @@
 ---
-title: Password based symmetric file encryption in Java
+title: Password based symmetric file encryption in Java using JDK
 keywords: sample
 summary: "Password based symmetric file encryption in Java"
 sidebar: java_sidebar

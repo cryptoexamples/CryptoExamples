@@ -5,15 +5,15 @@ entries:
   levels: one
   folders:
 
-  - title: Products
+  - title: Languages and Libraries
     output: web
     folderitems:
     - title: News
       url: /news.html
       output: web
-    - title: Java
+    - title: Java Crypto with JDK
       url: /java_landing_page.html
       output: web
-    - title: Java Keyczar
+    - title: Java Crypto with Keyczar
       url: /java_keyczar_landing_page.html
       output: web

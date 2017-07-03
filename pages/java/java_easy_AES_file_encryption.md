@@ -1,5 +1,5 @@
 ---
-title: Java File Encryption
+title: Java File Encryption using JDK
 keywords: sample
 summary: "Java based string encryption"
 sidebar: java_sidebar

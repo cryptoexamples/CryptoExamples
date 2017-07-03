@@ -1,5 +1,5 @@
 ---
-title: Java String Hash
+title: Java String Hashing using JDK
 keywords: sample
 summary: "Java based string hashing"
 sidebar: java_sidebar

@@ -1,5 +1,5 @@
 ---
-title: String Signing in Java with keyczar
+title: String Signing in Java using keyczar
 keywords: sample
 summary: "Java based string signing with keyczar"
 sidebar: java_keyczar_sidebar

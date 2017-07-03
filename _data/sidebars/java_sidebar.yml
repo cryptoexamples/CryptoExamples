@@ -3,7 +3,7 @@
 
 entries:
 - title: Sidebar
-  product: Java
+  product: Java Crypto with JDK
   #version: 1.0
   folders:
 
@@ -20,10 +20,10 @@ entries:
       output: pdf
       type: frontmatter
 
-  - title: Java Scenarios
+  - title: Java JDK Scenarios
     output: web, pdf
     folderitems:
-    - title: Java Crypto Introdcution
+    - title: Java JDK Crypto Introdcution
       url: /java_landing_page.html
       output: web
 
@@ -31,7 +31,7 @@ entries:
       url: /java_string_encryption_symmetric.html
       output: web, pdf
     
-    - title: Easy String Encryption
+    - title: String Encryption with separate class
       url: /java_easy_AES_string_encryption.html
       output: web, pdf
     
@@ -39,7 +39,7 @@ entries:
       url: /java_file_encryption_symmetric_password_based.html
       output: web, pdf
       
-    - title: Easy File Encryption
+    - title: File Encryption with separate class
       url: /java_easy_AES_file_encryption.html
       output: web, pdf 
     

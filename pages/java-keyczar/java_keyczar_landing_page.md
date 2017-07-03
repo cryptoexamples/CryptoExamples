@@ -1,5 +1,5 @@
 ---
-title: Java with Keyczar
+title: Java Crypto using Keyczar
 keywords: Java crypto example
 sidebar: java_keyczar_sidebar
 toc: false

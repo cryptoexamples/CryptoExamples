@@ -1,5 +1,5 @@
 ---
-title: Java
+title: Java Crypto with JDK
 keywords: Java crypto example
 sidebar: java_sidebar
 toc: false

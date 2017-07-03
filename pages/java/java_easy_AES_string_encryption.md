@@ -1,5 +1,5 @@
 ---
-title: Java String Encryption
+title: Java String Encryption  using JDK
 keywords: sample
 summary: "Java based string encryption"
 sidebar: java_sidebar

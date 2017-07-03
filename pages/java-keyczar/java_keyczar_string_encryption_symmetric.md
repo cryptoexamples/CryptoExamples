@@ -1,5 +1,5 @@
 ---
-title: String Encryption in Java with keyczar
+title: String Encryption in Java using keyczar
 keywords: sample
 summary: "Java based string encryption with keyczar"
 sidebar: java_keyczar_sidebar
