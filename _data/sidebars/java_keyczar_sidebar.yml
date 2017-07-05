@@ -23,7 +23,7 @@ entries:
   - title: Java Scenarios
     output: web, pdf
     folderitems:
-    - title: Java Crypto Introdcution
+    - title: Java Crypto Introduction
       url: /java_keyczar_landing_page.html
       output: web
 

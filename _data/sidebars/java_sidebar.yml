@@ -23,7 +23,7 @@ entries:
   - title: Java JDK Scenarios
     output: web, pdf
     folderitems:
-    - title: Java JDK Crypto Introdcution
+    - title: Java JDK Crypto Introduction
       url: /java_landing_page.html
       output: web
 
