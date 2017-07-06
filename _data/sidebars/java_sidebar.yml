@@ -27,8 +27,12 @@ entries:
       url: /java_landing_page.html
       output: web
 
-    - title: String Encryption
-      url: /java_string_encryption_symmetric.html
+    - title: String Encryption using password
+      url: /java_string_encryption_password_based_symmetric.html
+      output: web, pdf
+      
+    - title: String Encryption using key generation
+      url: /java_string_encryption_key_based_symmetric.html
       output: web, pdf
     
     - title: String Encryption with separate class
