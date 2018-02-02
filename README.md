@@ -28,3 +28,8 @@ They demonstrate how cryptography can be used in many programming languages for 
 #### [Keyczar](https://github.com/google/keyczar)
 
 - [kmindi/java-keyczar-crypto-examples](https://github.com/kmindi/java-keyczar-crypto-examples)
+
+
+# Other
+
+Theme based on http://idratherbewriting.com/documentation-theme-jekyll/
