@@ -1,6 +1,6 @@
 ---
 title: Introduction
-keywords: sample homepage
+keywords: example homepage
 sidebar: home_sidebar
 permalink: index.html
 #summary: These brief instructions will help you get started quickly with the theme. The other topics in this help provide additional information and detail about working with other aspects of this theme and Jekyll.
@@ -26,9 +26,9 @@ They demonstrate how cryptography can be used in many programming languages for 
 - Providing **copyable code** that can be used right away (complete)
 - Working with the **latest stable release of the programming language** or compiler
 - Indicating **reviewed code**
-- Automatic **unit tests** for all code samples
-- State the cryptographic threats that are mitigated in each sample 
-- State the cryptographic gurantees/features in each sample
+- Automatic **unit tests** for all code examples
+- State the cryptographic threats that are mitigated in each example 
+- State the cryptographic guarantees/features in each example
 
 # Detailed Information
 
