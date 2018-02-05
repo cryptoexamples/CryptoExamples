@@ -32,7 +32,7 @@ They demonstrate how cryptography can be used in many programming languages for 
 
 # Detailed Information
 
-### Choosing secure values for key size/lenth
+### Choosing secure values for key size/length
 
 Tradeoff between speed and security. Usually a longer key is harder to guess by an attacker through a brute-force attack, but using a longer key also makes the computation take more time.
 
