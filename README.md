@@ -35,4 +35,4 @@ They demonstrate how cryptography can be used in many programming languages for 
 Theme based on http://idratherbewriting.com/documentation-theme-jekyll/
 
 ## Planned Architecture for CryptoExamples
-![Target Architecture](images/RepoOverview.png)
+![Target Architecture](images/architecture.png)
