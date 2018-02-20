@@ -13,8 +13,11 @@ They demonstrate how cryptography can be used in many programming languages for 
 
 ## Available programming languages and use cases
 
-- [Java Crypto with JDK (1.8)](java_landing_page)
-- [Java Crypto with keyczar](java_keyczar_landing_page)
+{% for page in site.pages %}
+{% if page.sort_weight == 1 %}
+- [{{ page.title }}]({{ page.url }})
+{% endif %}
+{% endfor %}
 
 ## Goals
 
