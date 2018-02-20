@@ -2,9 +2,8 @@
 title: Java String Hashing using JDK
 keywords: sample
 summary: "Java based string hashing"
-sidebar: java_sidebar
 permalink: java_string_hash.html
-folder: java
+folder: Java JDK
 tags: [Java, hash, SHA, SHA-512]
 ---
 

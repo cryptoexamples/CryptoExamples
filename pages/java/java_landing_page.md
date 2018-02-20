@@ -1,10 +1,10 @@
 ---
 title: Java Crypto with JDK
 keywords: Java crypto example
-sidebar: java_sidebar
 toc: false
 permalink: java_landing_page.html
-folder: java
+folder: Java JDK
+sort_weight: 1
 ---
 
 # Available Crypto Scenarios and Use Cases

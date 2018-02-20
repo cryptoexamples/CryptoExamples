@@ -2,9 +2,8 @@
 title: Java Password Based String Encryption using JDK
 keywords: sample
 summary: "Password based string encryption in Java"
-sidebar: java_sidebar
 permalink: java_string_encryption_password_based_symmetric.html
-folder: java
+folder: Java JDK
 tags: [Java, AES, GCM, PBKDF2, Salt, AEAD]
 ---
 

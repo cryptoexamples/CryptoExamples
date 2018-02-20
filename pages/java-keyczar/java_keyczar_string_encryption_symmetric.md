@@ -2,9 +2,8 @@
 title: String Encryption in Java using keyczar
 keywords: sample
 summary: "Java based string encryption with keyczar"
-sidebar: java_keyczar_sidebar
 permalink: java_keyczar_string_encryption_symmetric.html
-folder: java
+folder: Java Keyczar
 tags: [Java, AES]
 ---
 

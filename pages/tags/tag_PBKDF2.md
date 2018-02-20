@@ -3,8 +3,7 @@ title: "PBKDF2 pages"
 tagName: PBKDF2
 search: exclude
 permalink: tag_PBKDF2.html
-sidebar: java_sidebar
-folder: tags
+folder: Tags
 ---
 {% include taglogic.html %}
 

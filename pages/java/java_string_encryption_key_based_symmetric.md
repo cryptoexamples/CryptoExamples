@@ -2,9 +2,8 @@
 title: Java String Encryption with key generation using JDK
 keywords: sample
 summary: "String encryption in Java with key generation"
-sidebar: java_sidebar
 permalink: java_string_encryption_key_based_symmetric.html
-folder: java
+folder: Java JDK
 tags: [Java, AES, GCM, Salt, AEAD]
 ---
 

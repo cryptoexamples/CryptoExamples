@@ -2,9 +2,8 @@
 title: Java String Signing using JDK
 keywords: sample
 summary: "Java based string signing"
-sidebar: java_sidebar
 permalink: java_string_sign.html
-folder: java
+folder: Java JDK
 tags: [Java, hash, SHA, SHA-512]
 ---
 
