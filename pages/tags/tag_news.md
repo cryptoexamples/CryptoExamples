@@ -3,7 +3,7 @@ title: "News"
 tagName: news
 search: exclude
 permalink: tag_news.html
-folder: tags
+folder: Tags
 ---
 {% include taglogic.html %}
 

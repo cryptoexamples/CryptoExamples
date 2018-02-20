@@ -3,7 +3,7 @@ title: String Signing in Java using keyczar
 keywords: sample
 summary: "Java based string signing with keyczar"
 permalink: java_keyczar_string_sign.html
-folder: java
+folder: Java Keyczar
 tags: [Java, hash]
 ---
 

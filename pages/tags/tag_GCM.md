@@ -3,7 +3,7 @@ title: "GCM pages"
 tagName: GCM
 search: exclude
 permalink: tag_GCM.html
-folder: tags
+folder: Tags
 ---
 {% include taglogic.html %}
 

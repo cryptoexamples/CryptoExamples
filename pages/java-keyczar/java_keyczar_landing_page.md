@@ -3,7 +3,7 @@ title: Java Crypto using Keyczar
 keywords: Java crypto example
 toc: false
 permalink: java_keyczar_landing_page.html
-folder: java-keyczar
+folder: Java Keyczar
 ---
 
 # Available Crypto Scenarios and Use Cases

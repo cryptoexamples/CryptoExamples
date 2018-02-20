@@ -3,7 +3,7 @@ title: "Salt pages"
 tagName: Salt
 search: exclude
 permalink: tag_Salt.html
-folder: tags
+folder: Tags
 ---
 {% include taglogic.html %}
 
