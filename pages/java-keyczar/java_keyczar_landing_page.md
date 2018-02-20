@@ -4,6 +4,7 @@ keywords: Java crypto example
 toc: false
 permalink: java_keyczar_landing_page.html
 folder: Java Keyczar
+sort_weight: 1
 ---
 
 # Available Crypto Scenarios and Use Cases

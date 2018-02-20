@@ -6,7 +6,8 @@
     <li class="deactive">
         <a href="#">{{ folder.name }}</a>
         <ul>
-            {% for other_page in folder.items %}
+            {% assign other_pages = folder.items | sort: 'sort_weight' | reverse %}
+            {% for other_page in other_pages %}
             {% if other_page.url == page.url %}
             <li class="active"><a href="{{ other_page.url }}" >{{ other_page.title }}</a></li>
             {% else %}

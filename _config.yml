@@ -81,6 +81,7 @@ defaults:
       comments: true
       search: true
       topnav: topnav
+      sort_weight: 0
   -
     scope:
       path: ""
