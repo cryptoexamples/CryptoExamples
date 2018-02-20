@@ -1,6 +1,5 @@
 ---
 title: Introduction
-keywords: example homepage
 permalink: index.html
 ---
 
