@@ -7,10 +7,10 @@ permalink: index.html
 
 # Introduction
 
-Many applications need cryptography. There are many examples in the web, that are either insecure or do not work right away. 
+Many applications need cryptography. There are many examples in the web, that are either insecure or do not work right away.
 As programmers are usually not cryptography or security experts, they should be able to take the path of least resistance and not have to bother with all the decisions needed to make cryptography really secure.
 The **crypto examples provided on this site meet current security and cryptography requirements**.
-They demonstrate how cryptography can be used in many programming languages for common use cases like encrypting a String or a file using symmetric or asymmetric encryption. 
+They demonstrate how cryptography can be used in many programming languages for common use cases like encrypting a String or a file using symmetric or asymmetric encryption.
 
 ## Available programming languages and use cases
 
@@ -26,7 +26,7 @@ They demonstrate how cryptography can be used in many programming languages for 
 - Working with the **latest stable release of the programming language** or compiler
 - Indicating **reviewed code**
 - Automatic **unit tests** for all code examples
-- State the cryptographic threats that are mitigated in each example 
+- State the cryptographic threats that are mitigated in each example
 - State the cryptographic guarantees/features in each example
 
 # Detailed Information
