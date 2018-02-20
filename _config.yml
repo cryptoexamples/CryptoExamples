@@ -80,7 +80,6 @@ defaults:
       layout: "page"
       comments: true
       search: true
-      sidebar: home_sidebar
       topnav: topnav
   -
     scope:
@@ -100,7 +99,6 @@ defaults:
       layout: "post"
       comments: true
       search: true
-      sidebar: home_sidebar
       topnav: topnav
 
 # these are defaults used for the frontmatter for these file types

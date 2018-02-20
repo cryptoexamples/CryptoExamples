@@ -1,7 +1,6 @@
 ---
 title: Java Crypto using Keyczar
 keywords: Java crypto example
-sidebar: java_keyczar_sidebar
 toc: false
 permalink: java_keyczar_landing_page.html
 folder: java-keyczar

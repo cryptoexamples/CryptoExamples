@@ -2,7 +2,6 @@
 title: Java File Encryption using JDK
 keywords: sample
 summary: "Java based string encryption"
-sidebar: java_sidebar
 permalink: java_easy_AES_file_encryption.html
 folder: java
 tags: [Java, AES, GCM, PBKDF2, Salt, AEAD]
