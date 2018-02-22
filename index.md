@@ -1,21 +1,22 @@
 ---
 title: Introduction
-keywords: example homepage
 permalink: index.html
-#summary: These brief instructions will help you get started quickly with the theme. The other topics in this help provide additional information and detail about working with other aspects of this theme and Jekyll.
 ---
 
 # Introduction
 
-Many applications need cryptography. There are many examples in the web, that are either insecure or do not work right away. 
+Many applications need cryptography. There are many examples in the web, that are either insecure or do not work right away.
 As programmers are usually not cryptography or security experts, they should be able to take the path of least resistance and not have to bother with all the decisions needed to make cryptography really secure.
 The **crypto examples provided on this site meet current security and cryptography requirements**.
-They demonstrate how cryptography can be used in many programming languages for common use cases like encrypting a String or a file using symmetric or asymmetric encryption. 
+They demonstrate how cryptography can be used in many programming languages for common use cases like encrypting a String or a file using symmetric or asymmetric encryption.
 
 ## Available programming languages and use cases
 
-- [Java Crypto with JDK (1.8)](java_landing_page)
-- [Java Crypto with keyczar](java_keyczar_landing_page)
+{% for page in site.pages %}
+{% if page.is_landingpage == 1 %}
+- [{{ page.title }}]({{ page.url }})
+{% endif %}
+{% endfor %}
 
 ## Goals
 
@@ -26,7 +27,7 @@ They demonstrate how cryptography can be used in many programming languages for 
 - Working with the **latest stable release of the programming language** or compiler
 - Indicating **reviewed code**
 - Automatic **unit tests** for all code examples
-- State the cryptographic threats that are mitigated in each example 
+- State the cryptographic threats that are mitigated in each example
 - State the cryptographic guarantees/features in each example
 
 # Detailed Information
