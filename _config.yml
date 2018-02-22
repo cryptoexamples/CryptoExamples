@@ -81,7 +81,7 @@ defaults:
       comments: true
       search: true
       topnav: topnav
-      sort_weight: 0
+      is_landingpage: 0
   -
     scope:
       path: ""

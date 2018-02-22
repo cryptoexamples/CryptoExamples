@@ -13,7 +13,7 @@ They demonstrate how cryptography can be used in many programming languages for 
 ## Available programming languages and use cases
 
 {% for page in site.pages %}
-{% if page.sort_weight == 1 %}
+{% if page.is_landingpage == 1 %}
 - [{{ page.title }}]({{ page.url }})
 {% endif %}
 {% endfor %}
