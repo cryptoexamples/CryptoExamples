@@ -36,8 +36,8 @@ include:
 
 exclude:
   - "*.yml"
-  - "pages/**.html" # exclude html files under pages
-  - "*/*/*/*" # exclude files from submodules in pages
+  - "**.html"
+  - "*/*/*/*"
   - .idea/
   - .gitignore
   - .bundle/
