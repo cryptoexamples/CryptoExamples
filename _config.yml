@@ -3,10 +3,10 @@ repository: kmindi/crypto-examples
 output: web
 # this property is useful for conditional filtering of content that is separate from the PDF.
 
-topnav_title: Crypto Code Examples
+topnav_title: CryptoExamples
 # this appears on the top navigation bar next to the home button
 
-site_title: Crypto Code Examples
+site_title: CryptoExamples
 # this appears in the html browser tab for the site title (seen mostly by search engines, not users)
 
 company_name: Kai Mindermann M.Sc.

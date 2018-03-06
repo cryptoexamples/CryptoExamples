@@ -1,5 +1,5 @@
 ---
-title: Introduction
+title: Code examples for common crypto scenarios
 permalink: index.html
 ---
 
