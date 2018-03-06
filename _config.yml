@@ -40,7 +40,7 @@ exclude:
   - pages/java-keyczar/java-keyczar-crypto-examples/
 # these are the files and directories that jekyll will exclude from the build
 
-feedback_subject_line: Crypto Examples
+feedback_subject_line: CryptoExamples
 
 feedback_email: info@example.com
 # used as a contact email for the Feedback link in the top navigation bar
