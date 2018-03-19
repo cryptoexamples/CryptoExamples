@@ -45,7 +45,6 @@ exclude:
   - .gitignore
   - .bundle/
   - vendor/
-  
 
 feedback_subject_line: CryptoExamples
 
