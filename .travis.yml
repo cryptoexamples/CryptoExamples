@@ -3,6 +3,7 @@ rvm:
   - 2.1
 script:
   - bundle exec jekyll build
+  - rm _site/pages/*/*/README.html
   - bundle exec htmlproofer ./_site --only-4xx --disable-external --check-html --allow-hash-href --assume-extension
 env:
   global:
