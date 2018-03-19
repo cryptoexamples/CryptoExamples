@@ -35,16 +35,20 @@ include:
   - "LICENSE"
 
 exclude:
+  # Exclude special subdirectories from build.
+  # These commmented out excludes do currently not work. If jekyll fixes the bug (https://github.com/jekyll/jekyll/issues/4791) 
+  # that corrects the exclude/include behavior, the following can be used instead the "hardcoded" subdirectories
   # - "*.yml"
   # - "**.html"
   # - "*/*/*/*"
+  - pages/java/java-crypto-examples/
+  - pages/java-keyczar/java-keyczar-crypto-examples/
+  # these are the files and directories that jekyll will exclude from the build
   - .idea/
   - .gitignore
   - .bundle/
   - vendor/
-  - pages/java/java-crypto-examples/
-  - pages/java-keyczar/java-keyczar-crypto-examples/
-# these are the files and directories that jekyll will exclude from the build
+  
 
 feedback_subject_line: CryptoExamples
 
