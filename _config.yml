@@ -35,13 +35,15 @@ include:
   - "LICENSE"
 
 exclude:
-  - "*.yml"
-  - "**.html"
-  - "*/*/*/*"
+  # - "*.yml"
+  # - "**.html"
+  # - "*/*/*/*"
   - .idea/
   - .gitignore
   - .bundle/
   - vendor/
+  - pages/java/java-crypto-examples/
+  - pages/java-keyczar/java-keyczar-crypto-examples/
 # these are the files and directories that jekyll will exclude from the build
 
 feedback_subject_line: CryptoExamples
