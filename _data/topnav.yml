@@ -11,8 +11,5 @@ topnav_dropdowns:
 - title: Topnav dropdowns
   folders:
     - title: Languages and Libraries
-      folderitems:
-        - title: Java using JDK
-          url: /java_landing_page.html
-        - title: Java using keyczar
-          url: /java_keyczar_landing_page.html
+      tag: dropdown_lang_lib # if changed, also change in _includes/topnav.html for autofill
+#     folderitems: # getting automatically filled
