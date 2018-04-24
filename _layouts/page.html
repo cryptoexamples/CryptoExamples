@@ -55,30 +55,38 @@ layout: default
     {% endif %}
 
   {{content}}
-   {% if page.sources %}
-   <h2>Sources for this example</h2>
-   <ul>
-   {% for source in page.sources %}
-        <li><a href={{ source.url }} target=_blank>{{ source.description }} </a></li>
-   {% endfor %}
-   </ul>
-   {% endif %}
-   {% if page.sources %}
-   <h2>Changes to this example</h2>
-   <ol>
-   {% for change in page.changes %}
-        <li> Version by: <a href={{ change.url }} target=_blank>{{ change.name }}</a> on {{ change.reviewed_on }}.
-        Reviewed by:
-        <ul>
-        {% for reviewer in change.reviewers %}
-           <li><a href={{ reviewer.url }} target=_blank>{{ reviewer.reviewed_by }}</a> (<a href={{ reviewer.reviewed_commit }})>see commit</a>)
-           </ll>
-        {% endfor %}
-        </ul>
-        </li>
-   {% endfor %}
-   </ol>
-   {% endif %}
+
+  {% if page %}
+  {% if page.references %}
+  <ul>
+  <h3>References</h3>
+  {% for reference in page.references %}
+       <li><a href={{ reference.url }} target=_blank>{{ reference.description }} </a></li>
+  {% endfor %}
+  </ul>
+  {% endif %}
+
+  {% if page.authors %}
+  <h3>Authors</h3>
+  {% assign first = true %}
+  {% for author in page.authors %}
+      {% unless  first %}
+           {{","}}
+      {% endunless %}
+       <a href={{ author.url }} target=_blank>{{ author.name }}</a>
+      {% assign first = false %}
+  {% endfor %}
+  {% endif %}
+
+  {% if page.current_reviews %}
+  <h3>Last Reviewes</h3>
+    <ul>
+    {% for reviewer in page.current_reviews %}
+       <li><a href={{ reviewer.url }} target=_blank>{{ reviewer.name }}</a> (<a href={{ reviewer.reviewed_commit }})>see commit</a>)</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+  {% endif %}
 
     <div class="tags">
         {% if page.tags != null %}
