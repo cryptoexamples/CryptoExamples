@@ -81,7 +81,7 @@ layout: default
   {% endif %}
 
   {% if page.current_reviews %}
-  <h3>Last Reviewes</h3>
+  <h3>Last Reviews</h3>
     <ul>
     {% for reviewer in page.current_reviews %}
        <li><a href={{ reviewer.url }} target=_blank>{{ reviewer.name }}</a> (<a href={{ reviewer.reviewed_commit }})>see commit</a>)</li>
