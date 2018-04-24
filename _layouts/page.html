@@ -57,6 +57,8 @@ layout: default
   {{content}}
 
   {% if page %}
+  <!-- copy value from front matter to site namespace -->
+  {% assign site.last_updated =  page.last_updated %}
   {% if page.references %}
   <ul>
   <h3>References</h3>
