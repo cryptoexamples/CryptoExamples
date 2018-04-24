@@ -60,8 +60,8 @@ layout: default
   <!-- copy value from front matter to site namespace -->
   {% assign site.last_updated =  page.last_updated %}
   {% if page.references %}
-  <ul>
   <h3>References</h3>
+  <ul>
   {% for reference in page.references %}
        <li><a href={{ reference.url }} target=_blank>{{ reference.description }} </a></li>
   {% endfor %}
@@ -81,7 +81,7 @@ layout: default
   {% endif %}
 
   {% if page.current_reviews %}
-  <h3>Last Reviews</h3>
+  <h3>Reviews</h3>
     <ul>
     {% for reviewer in page.current_reviews %}
        <li><a href={{ reviewer.url }} target=_blank>{{ reviewer.name }}</a> (<a href={{ reviewer.reviewed_commit }})>see commit</a>)</li>
