@@ -56,6 +56,40 @@ layout: default
 
   {{content}}
 
+  {% if page %}
+  <!-- copy value from front matter to site namespace -->
+  {% assign site.last_updated =  page.last_updated %}
+  {% if page.references %}
+  <h3>References</h3>
+  <ul>
+  {% for reference in page.references %}
+       <li><a href={{ reference.url }} target=_blank>{{ reference.description }} </a></li>
+  {% endfor %}
+  </ul>
+  {% endif %}
+
+  {% if page.authors %}
+  <h3>Authors</h3>
+  {% assign first = true %}
+  {% for author in page.authors %}
+      {% unless  first %}
+           {{","}}
+      {% endunless %}
+       <a href={{ author.url }} target=_blank>{{ author.name }}</a>
+      {% assign first = false %}
+  {% endfor %}
+  {% endif %}
+
+  {% if page.current_reviews %}
+  <h3>Reviews</h3>
+    <ul>
+    {% for reviewer in page.current_reviews %}
+       <li><a href={{ reviewer.url }} target=_blank>{{ reviewer.name }}</a> (<a href={{ reviewer.reviewed_commit }})>see commit</a>)</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+  {% endif %}
+
     <div class="tags">
         {% if page.tags != null %}
         <b>Tags: </b>
