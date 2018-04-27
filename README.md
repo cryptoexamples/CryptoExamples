@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/kmindi/crypto-examples.svg?branch=master)](https://travis-ci.org/kmindi/crypto-examples)
+[![Build Status](https://travis-ci.org/cryptoexamples/CryptoExamples.svg?branch=master)](https://travis-ci.org/cryptoexamples/CryptoExamples)
 
 # Introduction
 
