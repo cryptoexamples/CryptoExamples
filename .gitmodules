@@ -1,6 +1,6 @@
 [submodule "pages/java/java-crypto-examples"]
 	path = pages/java/java-crypto-examples
-	url = https://github.com/kmindi/java-crypto-examples.git
+	url = https://github.com/cryptoexamples/java-crypto-examples.git
 [submodule "pages/java-keyczar/java-keyczar-crypto-examples"]
 	path = pages/java-keyczar/java-keyczar-crypto-examples
-	url = https://github.com/kmindi/java-keyczar-crypto-examples.git
+	url = https://github.com/cryptoexamples/java-keyczar-crypto-examples.git
