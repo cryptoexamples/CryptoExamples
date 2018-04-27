@@ -23,11 +23,11 @@ They demonstrate how cryptography can be used in many programming languages for 
 ### Java
 #### JDK
 
-- [kmindi/java-crypto-examples](https://github.com/kmindi/java-crypto-examples)
+- [cryptoexamples/java-crypto-examples](https://github.com/cryptoexamples/java-crypto-examples)
 
 #### [Keyczar](https://github.com/google/keyczar)
 
-- [kmindi/java-keyczar-crypto-examples](https://github.com/kmindi/java-keyczar-crypto-examples)
+- [cryptoexamples/java-keyczar-crypto-examples](https://github.com/cryptoexamples/java-keyczar-crypto-examples)
 
 # More about CryptoExamples
 ## Architecture
