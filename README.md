@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/cryptoexamples/CryptoExamples.svg?branch=master)](https://travis-ci.org/cryptoexamples/CryptoExamples)
 
-# Introduction
+## Introduction
 
 Many applications need cryptography. There are many examples in the web, that are either insecure or do not work right away. 
 As programmers are usually not cryptography or security experts, they should be able to take the path of least resistance and not have to bother with all the decisions needed to make cryptography really secure.
@@ -29,7 +29,6 @@ They demonstrate how cryptography can be used in many programming languages for 
 
 - [cryptoexamples/java-keyczar-crypto-examples](https://github.com/cryptoexamples/java-keyczar-crypto-examples)
 
-# More about CryptoExamples
 ## Architecture
 ![Target Architecture](images/architecture.png)
 
@@ -57,6 +56,37 @@ Examples for a specific library always reside in their own repositories, which i
   * The project owner(s) will then include a copy of your project into CryptoExamples.
 4. As soon as a copy of your project has been added to CryptoExamples, feel free to contribute any (more) code as in (a).
 
-# Other
+## Review Code Examples
+
+Example code should be reviewed by security experts that follow the following process:
+
+A review is for one or more examples, not only the changes to it! 
+A review consists of 
+- adding meta data to the example's Markdown file, that renders review information on the website and
+- signing the commit with a trusted (by the project maintainers) GPG key.
+
+### Steps
+1. Review the code example based on current security standards and the [CryptoExample-Guidlines](https://github.com/cryptoexamples/CryptoExamples-Guidelines).
+2. Fill out the `current_review` section in the *jekyll front matter* of each reviewed example:
+```
+    {
+        name: "Your Name",
+        # Link to a site about you.
+        url: "https://github.com/master-security",
+        # Link the current commit (HEAD) here.
+        reviewed_commit: "https://github.com/cryptoexamples/CryptoExamples/commit/6fa03d7a38c06ac69ce639a503fa947a99c3d168"
+    },
+```
+3. Create and push an empty and signed commit
+
+`git commit --allow-empty --gpg-sign=12345678 # replace "12345678" by your GnuPG fingerprint`
+
+Once the review has been made, the corresponding branch can be merged into master, a release can be created and the submodule can be updated in CryptoExamples.
+
+## Experts
+
+Contact the project maintainers to become a CryptoExamples reviewer.
+
+## Other
 
 Theme based on http://idratherbewriting.com/documentation-theme-jekyll/
