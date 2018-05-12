@@ -4,3 +4,6 @@
 [submodule "pages/java-keyczar/java-keyczar-crypto-examples"]
 	path = pages/java-keyczar/java-keyczar-crypto-examples
 	url = https://github.com/cryptoexamples/java-keyczar-crypto-examples.git
+[submodule "pages/java-tink/java-tink-cryptoexamples"]
+	path = pages/java-tink/java-tink-cryptoexamples
+	url = https://github.com/cryptoexamples/java-tink-cryptoexamples.git
