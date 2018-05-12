@@ -38,3 +38,4 @@ Tradeoff between speed and security. Usually a longer key is harder to guess by 
 
 - [keylength.com](https://www.keylength.com/en/compare/)
 - [eBACS (ECRYPT Benchmarking of Cryptographic Systems)](https://bench.cr.yp.to/)
+- [SafeCurves: Choosing safe curves for elliptic-curve cryptography](https://safecurves.cr.yp.to/)
