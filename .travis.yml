@@ -4,8 +4,8 @@ rvm:
 script:
   - bundle exec jekyll build | tee jekyll_build.log
   - grep -v "Build Warning:" jekyll_build.log
-  - rm _site/pages/*/*/README.html
-  - rm _site/pages/*/*/CHANGELOG.html
+  - find _site/pages/ -name "README.html" -type f -delete
+  - find _site/pages/ -name "CHANGELOG.html" -type f -dele
   - bundle exec htmlproofer ./_site --only-4xx --disable-external --check-html --allow-hash-href --assume-extension
 env:
   global:
