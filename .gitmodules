@@ -7,3 +7,6 @@
 [submodule "pages/java-tink/java-tink-cryptoexamples"]
 	path = pages/java-tink/java-tink-cryptoexamples
 	url = https://github.com/cryptoexamples/java-tink-cryptoexamples.git
+[submodule "pages/python-cryptography"]
+	path = pages/python-cryptography
+	url = https://github.com/cryptoexamples/python-cryptography-cryptoexamples.git
