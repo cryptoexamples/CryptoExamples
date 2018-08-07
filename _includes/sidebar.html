@@ -2,7 +2,24 @@
 <ul id="mysidebar" class="nav">
     <li class="sidebarTitle">Navigation</li>
     {% for folder in folders %}
-    {% if folder.name != "" %}
+    {% if folder.name != "" and folder.name != "News" and folder.name != "Tags" %}
+    <li class="deactive">
+        <a href="#">{{ folder.name }}</a>
+        <ul>
+            {% assign other_pages = folder.items | sort: 'is_landingpage' | reverse %}
+            {% for other_page in other_pages %}
+            {% if other_page.url == page.url %}
+            <li class="active"><a href="{{ other_page.url }}" >{{ other_page.title }}</a></li>
+            {% else %}
+            <li><a href="{{ other_page.url }}" >{{ other_page.title }}</a></li>
+            {% endif %}
+            {% endfor %}
+        </ul>
+    </li>
+    {% endif %}
+    {% endfor %}
+    {% for folder in folders %}
+    {% if folder.name != "" and folder.name == "News" or folder.name == "Tags" %}
     <li class="deactive">
         <a href="#">{{ folder.name }}</a>
         <ul>
