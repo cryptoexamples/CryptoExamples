@@ -10,3 +10,6 @@
 [submodule "pages/javascript-crypto-cryptoexamples"]
 	path = pages/javascript-crypto-cryptoexamples
 	url = https://github.com/cryptoexamples/javascript-crypto-cryptoexamples.git
+[submodule "pages/javascript-forge-cryptoexamples"]
+	path = pages/javascript-forge-cryptoexamples
+	url = https://github.com/cryptoexamples/javascript-forge-cryptoexamples.git
