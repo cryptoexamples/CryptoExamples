@@ -7,3 +7,6 @@
 [submodule "pages/python-cryptography"]
 	path = pages/python-cryptography
 	url = https://github.com/cryptoexamples/python-cryptography-cryptoexamples.git
+[submodule "pages/javascript-crypto-cryptoexamples"]
+	path = pages/javascript-crypto-cryptoexamples
+	url = https://github.com/cryptoexamples/javascript-crypto-cryptoexamples.git

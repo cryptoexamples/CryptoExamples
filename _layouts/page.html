@@ -63,7 +63,7 @@ layout: default
   <h3>References</h3>
   <ul>
   {% for reference in page.references %}
-       <li><a href={{ reference.url }} target=_blank>{{ reference.description }} </a></li>
+       <li><a href="{{ reference.url | default: "#" }}" target="_blank">{{ reference.description }} </a></li>
   {% endfor %}
   </ul>
   {% endif %}
@@ -75,7 +75,7 @@ layout: default
       {% unless  first %}
            {{","}}
       {% endunless %}
-       <a href={{ author.url }} target=_blank>{{ author.name }}</a>
+       <a href="{{ author.url | default: "#" }}" target="_blank">{{ author.name }}</a>
       {% assign first = false %}
   {% endfor %}
   {% endif %}
@@ -84,7 +84,7 @@ layout: default
   <h3>Reviews</h3>
     <ul>
     {% for reviewer in page.current_reviews %}
-       <li><a href={{ reviewer.url }} target=_blank>{{ reviewer.name }}</a> (<a href={{ reviewer.reviewed_commit }})>see commit</a>)</li>
+       <li><a href="{{ reviewer.url | default: "#" }}" target="_blank">{{ reviewer.name }}</a> (<a href="{{ reviewer.reviewed_commit | default: "#" }})" target="_blank">see commit</a>)</li>
     {% endfor %}
     </ul>
   {% endif %}
